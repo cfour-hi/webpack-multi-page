@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open",
-    "build": "webpack"
+    "dev": "NODE_ENV=development webpack-dev-server --open",
+    "build": "NODE_ENV=production webpack"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +14,11 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.29.0",
     "postcss-loader": "^2.0.6",
     "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.5.1",
     "webpack-merge": "^4.1.0"
