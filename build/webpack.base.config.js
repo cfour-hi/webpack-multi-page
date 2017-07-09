@@ -10,14 +10,14 @@ config.entrys.forEach(function (entry) {
 
 var webpackConfig = {
   entry: entrys,
+  resolve: {
+    alias: {
+      src: path.resolve(__dirname, '../src/'),
+      app: path.resolve(__dirname, '../src/lib/app/')
+    }
+  },
   module: {
     rules: [
-      {
-        test: /\.html$/,
-        use: [{
-          loader: 'html-loader'
-        }],
-      },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
@@ -39,7 +39,7 @@ var webpackConfig = {
         use: [
           {
             loader: 'url-loader',
-            query: {
+            options: {
               limit: 10000,
               outputPath: path.join(config.assetsSubDirectory, 'res')
             }

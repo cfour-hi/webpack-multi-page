@@ -37,7 +37,8 @@ config.entrys.forEach(function (entry) {
     filename: entry.filename,
     template: entry.template,
     inject: true,
-    chunks: ['manifest', 'commons', entry.entryName]
+    chunks: ['manifest', 'commons', entry.entryName],
+    env: JSON.parse(config.dev.env.NODE_ENV)
   }))
 });
 

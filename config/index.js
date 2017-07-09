@@ -13,13 +13,13 @@ var entrysConfig = [
 ];
 
 entrys.forEach(function (entry) {
-  var template = entry + '.html';
+  var filename = entry + '.html';
 
   entrysConfig.push({
     entryName: entry,
     entry: path.resolve(dirSrc, entry + '.js'),
-    filename: template,
-    template: path.resolve(dirSrc, template)
+    filename: filename,
+    template: path.resolve(dirSrc, filename)
   });
 });
 

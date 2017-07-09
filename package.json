@@ -22,5 +22,8 @@
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.5.1",
     "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
   }
 }

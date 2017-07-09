@@ -12,6 +12,9 @@ var webpackConfig = {
     path: config.assetsRoot,
     publicPath: config.build.publicPath
   },
+  externals: {
+    jquery: 'jQuery'
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.build.env
@@ -49,7 +52,8 @@ config.entrys.forEach(function (entry) {
       minifyCSS: true,
       minifyURLs: true
     },
-    chunks: ['manifest', 'commons', entry.entryName]
+    chunks: ['manifest', 'commons', entry.entryName],
+    env: config.build.env
   }))
 });
 

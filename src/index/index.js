@@ -1,10 +1,13 @@
-require('../lib/app/app.css')
-var app = require('../lib/app/app.js')
-var webpackPng = require('../lib/app/res/webpack.png')
+require('app/app.css');
+require('./index.css');
+
+var $ = require('jquery');
+var app = require('../lib/app/app.js');
 
 app('home')
 
 var banner = new Image();
-banner.src = webpackPng;
-
+banner.src = require('app/res/webpack.png');
 document.body.appendChild(banner)
+
+$('nav').css('background-color', '#0096ff');
