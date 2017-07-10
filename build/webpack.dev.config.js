@@ -30,7 +30,7 @@ var webpackConfig = {
       filename: path.join(config.assetsSubDirectory, 'js/[name].js')
     })
   ],
-  devtool: 'cheap-eval-source-map'
+  devtool: 'cheap-module-eval-source-map'
 };
 
 config.entrys.forEach(function (entry) {

@@ -11,3 +11,9 @@ banner.src = require('app/res/webpack.png');
 document.body.appendChild(banner)
 
 $('nav').css('background-color', '#0096ff');
+
+const consoleInfo = (info) => {
+  console.info(info);
+};
+
+consoleInfo('home')
