@@ -29,7 +29,8 @@ var webpackConfig = {
               loader: 'css-loader',
               options: {
                 sourceMap: true,
-                minimize: process.env.NODE_ENV === 'production'
+                minimize: process.env.NODE_ENV === 'production',
+                importLoaders: 1
               },
             },
             'postcss-loader'

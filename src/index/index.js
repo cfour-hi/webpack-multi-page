@@ -4,7 +4,7 @@ require('./index.css');
 var $ = require('jquery');
 var app = require('../lib/app/app.js');
 
-app('home')
+app('home');
 
 var banner = new Image();
 banner.src = require('app/res/webpack.png');

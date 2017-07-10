@@ -29,7 +29,8 @@ var webpackConfig = {
       name: 'manifest',
       filename: path.join(config.assetsSubDirectory, 'js/[name].js')
     })
-  ]
+  ],
+  devtool: 'cheap-eval-source-map'
 };
 
 config.entrys.forEach(function (entry) {

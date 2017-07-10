@@ -12,9 +12,6 @@ var webpackConfig = {
     path: config.assetsRoot,
     publicPath: config.build.publicPath
   },
-  externals: {
-    jquery: 'jQuery'
-  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.build.env
@@ -35,7 +32,11 @@ var webpackConfig = {
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true
     })
-  ]
+  ],
+  devtool: 'source-map',
+  externals: {
+    jquery: 'jQuery'
+  }
 };
 
 config.entrys.forEach(function (entry) {
