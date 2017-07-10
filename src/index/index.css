@@ -2,3 +2,6 @@ h1 {
   color: #f04134;
   transform: translateY(30px);
 }
+body {
+  background-image: url('../lib/app/res/webpack.png');
+}

@@ -1,3 +1,7 @@
+body {
+  background-image: url('../lib/app/res/webpack.png');
+}
+
 h1 {
   color: #00a854;
 }

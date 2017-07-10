@@ -53,7 +53,7 @@ config.entrys.forEach(function (entry) {
       minifyURLs: true
     },
     chunks: ['manifest', 'commons', entry.entryName],
-    env: config.build.env
+    env: JSON.parse(config.build.env.NODE_ENV)
   }))
 });
 
