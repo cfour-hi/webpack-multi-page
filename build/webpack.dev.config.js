@@ -1,4 +1,3 @@
-var path = require('path');
 var webpackMerge = require('webpack-merge');
 var webpack = require('webpack');
 var webpackBaseConfig = require('./webpack.base.config.js');
@@ -22,12 +21,12 @@ var webpackConfig = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
-      filename: path.join(config.assetsSubDirectory, 'js/[name].js'),
+      filename: config.assetsSubDirectory + 'js/[name].js',
       minChunks: 3
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
-      filename: path.join(config.assetsSubDirectory, 'js/[name].js')
+      filename: config.assetsSubDirectory + 'js/[name].js'
     })
   ],
   devtool: 'cheap-module-eval-source-map'

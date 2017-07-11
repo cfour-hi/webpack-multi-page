@@ -1,4 +1,3 @@
-var path = require('path');
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var webpackBaseConfig = require('./webpack.base.config.js');
@@ -22,12 +21,12 @@ var webpackConfig = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
-      filename: path.join(config.assetsSubDirectory, 'js/[name].[chunkhash:9].js'),
+      filename: config.assetsSubDirectory +'js/[name].[chunkhash:9].js',
       minChunks: 3
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
-      filename: path.join(config.assetsSubDirectory, 'js/[name].[chunkhash:9].js'),
+      filename: config.assetsSubDirectory +'js/[name].[chunkhash:9].js'
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true
@@ -35,7 +34,8 @@ var webpackConfig = {
   ],
   devtool: 'source-map',
   externals: {
-    jquery: 'jQuery'
+    jquery: 'jQuery',
+    lodash: '_'
   }
 };
 

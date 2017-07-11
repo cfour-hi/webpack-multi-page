@@ -2,7 +2,6 @@
   "name": "webpack-multi-page",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --progress --profile",
     "build": "cross-env NODE_ENV=production webpack --progress --display-error-details --profile"

@@ -18,7 +18,7 @@ var webpackConfig = {
   },
   module: {
     // 忽略大型的 library 可以提高构建性能
-    noParse: /jquery/,
+    noParse: /jquery|lodash/,
     rules: [
       {
         test: /\.html$/,
@@ -62,10 +62,23 @@ var webpackConfig = {
               // css bankground-image url 路径使用 "\" 分隔符会有问题
               // path.join(config.assetsSubDirectory, 'res/') => "assets\res\"
               // path.posix.join(config.assetsSubDirectory, 'res/') => "assets/res/"
-              outputPath: path.posix.join(config.assetsSubDirectory, 'res/'),
+              // outputPath: path.posix.join(config.assetsSubDirectory, 'img/'),
+              name: config.assetsSubDirectory + '/img/[name].[hash:9].[ext]',
               publicPath: process.env.NODE_ENV === 'production'
                 ? config.build.assetsPublicPath
                 : config.dev.assetsPublicPath
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: config.assetsSubDirectory + '/fonts/[name].[hash:9].[ext]',
             }
           }
         ]
