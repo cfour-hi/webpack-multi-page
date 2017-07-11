@@ -9,13 +9,15 @@
 </head>
 
 <body>
+  <header>@require('./lib/app/header.html')</header>
   <h1>home</h1>
   <nav>
     <a href="page-a/page-a.html">page-a</a>
     <a href="page-b/page-b.html">page-b</a>
     <a href="page-c/page-c.html">page-c</a>
   </nav>
-  <img src="<%= require('app/res/webpack.png') %>" alt="">
+  <img src="./lib/app/res/webpack.png" alt="">
+  <footer>@require('./lib/app/footer.html')</footer>
   <% if (htmlWebpackPlugin.options.env === 'production') { %>
     <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <% } %>

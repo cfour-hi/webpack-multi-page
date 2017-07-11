@@ -21,10 +21,9 @@ var webpackConfig = {
     noParse: /jquery/,
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.html$/,
         use: {
-          loader: 'babel-loader'
+          loader: 'underscore-template-loader'
         }
       },
       {
@@ -44,6 +43,13 @@ var webpackConfig = {
           ]
         }),
         exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.(png|svg|jpg|gif)$/,

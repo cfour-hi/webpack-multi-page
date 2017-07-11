@@ -21,6 +21,7 @@
     "html-webpack-plugin": "^2.29.0",
     "postcss-loader": "^2.0.6",
     "style-loader": "^0.18.2",
+    "underscore-template-loader": "^0.7.3",
     "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.5.1",
