@@ -1,3 +1,4 @@
+require('app/app.css')
 require('./page-b.css')
 
 var $ = require('jquery');

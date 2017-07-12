@@ -7,7 +7,7 @@ var app = require('../lib/app/app.js');
 app('home');
 
 var banner = new Image();
-banner.src = require('app/res/webpack.png');
+banner.src = require('app/img/webpack.png');
 document.body.appendChild(banner)
 
 $('nav').css('background-color', '#0096ff');
