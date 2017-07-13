@@ -27,6 +27,7 @@ module.exports = {
   entrys: entrysConfig,
   assetsRoot: path.resolve(__dirname, '../dist'),
   assetsSubDirectory: 'assets',
+  commonsChunkName: ['app', 'vendor', 'manifest'],
   dev: {
     env: require('./dev.env.js'),
     assetsPublicPath: '/'

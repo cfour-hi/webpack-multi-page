@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --progress --profile",
+    "test": "cross-env NODE_ENV=test webpack --progress --display-error-details --profile",
     "build": "cross-env NODE_ENV=production webpack --progress --display-error-details --profile"
   },
   "keywords": [],
@@ -27,6 +28,7 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0"
   }
 }

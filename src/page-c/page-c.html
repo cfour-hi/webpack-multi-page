@@ -10,8 +10,10 @@
 
 <body>
   <h1>page-c</h1>
-  <% if (htmlWebpackPlugin.options.env === 'production') { %>
+
+  <% if (htmlWebpackPlugin.options.env !== 'development') { %>
     <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
     <% } %>
 </body>
 

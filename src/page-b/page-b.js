@@ -1,8 +1,6 @@
 require('app/app.css')
 require('./page-b.css')
 
-var $ = require('jquery');
-
 var app = require('../lib/app/app.js')
 
 app('page-b')

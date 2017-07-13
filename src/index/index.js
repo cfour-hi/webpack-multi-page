@@ -1,7 +1,7 @@
 require('app/app.css');
 require('./index.css');
 
-var $ = require('jquery');
+var _ = require('lodash');
 var app = require('../lib/app/app.js');
 
 app('home');
