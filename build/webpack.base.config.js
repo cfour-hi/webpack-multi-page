@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 var config = require('../config/index.js');
 
 var entrys = {};
@@ -17,6 +18,10 @@ entrys.vendor = [
   'jquery',
   'normalize.css'
 ]
+
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
 
 var webpackConfig = {
   entry: entrys,
@@ -66,12 +71,24 @@ var webpackConfig = {
         })
       },
       {
+        enforce: 'pre',
+        test: /\.js$/,
+        use: {
+          // https://github.com/MoOx/eslint-loader
+          loader: 'eslint-loader',
+          options: {
+            formatter: require('eslint-friendly-formatter')
+          }
+        },
+        include: [resolve('src')]
+      },
+      {
         test: /\.js$/,
         use: {
           // https://github.com/babel/babel-loader
           loader: 'babel-loader'
         },
-        exclude: /node_modules/
+        include: [resolve('src')]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -115,7 +132,8 @@ var webpackConfig = {
       jQuery: 'jquery',
       'window.$': 'jquery',
       'window.jQuery': 'jquery'
-    })
+    }),
+    new FriendlyErrorsWebpackPlugin()
   ]
 };
 
