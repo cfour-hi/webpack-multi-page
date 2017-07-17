@@ -24,6 +24,11 @@ var webpackConfig = {
       minChunks: 3
     })
   ],
+  devServer: {
+    clientLogLevel: 'none',
+    noInfo: true,
+    overlay: true
+  },
   devtool: 'cheap-module-eval-source-map'
 };
 
