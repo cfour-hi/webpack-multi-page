@@ -30,6 +30,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.29.0",
     "postcss-loader": "^2.0.6",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
     "underscore-template-loader": "^0.7.3",
     "url-loader": "^0.5.9",
