@@ -1,3 +1,5 @@
+import 'font-awesome/css/font-awesome.css'
+
 require('app/app.css')
 require('./index.css')
 
