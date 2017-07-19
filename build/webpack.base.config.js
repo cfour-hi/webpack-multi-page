@@ -90,7 +90,7 @@ var webpackConfig = {
         include: [resolve('src')]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: [
           {
             // https://github.com/webpack-contrib/url-loader
@@ -106,7 +106,7 @@ var webpackConfig = {
         ]
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)$/,
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         use: [
           {
             // https://github.com/webpack-contrib/url-loader
