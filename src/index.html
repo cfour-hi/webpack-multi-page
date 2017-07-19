@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Home</title>
+  <% if (htmlWebpackPlugin.options.env !== 'development') { %>
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <% } %>
 </head>
 
 <body>
   @require('./lib/app/components/header.html')
-  <h1>home</h1>
+  <h1><i class="fa fa-battery-full" aria-hidden="true"></i>home</h1>
   <nav>
     <a href="page-a/page-a.html">page-a</a>
     <a href="page-b/page-b.html">page-b</a>

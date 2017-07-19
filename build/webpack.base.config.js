@@ -114,6 +114,9 @@ var webpackConfig = {
             options: {
               limit: 10000,
               name: config.assetsSubDirectory + '/fonts/[name].[hash:9].[ext]',
+              publicPath: process.env.NODE_ENV === 'development'
+                ? config.dev.assetsPublicPath
+                : config.build.assetsPublicPath
             }
           }
         ]

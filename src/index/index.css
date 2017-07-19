@@ -5,3 +5,7 @@ h1 {
 body {
   background-image: url('../lib/app/img/webpack.png');
 }
+
+.fa {
+  color: #fff;
+}
