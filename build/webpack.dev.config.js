@@ -6,16 +6,16 @@ var config = require('../config/index.js');
 
 var webpackConfig = {
   output: {
-    filename: '[name].js',
+    filename: config.assetsSubDirectory + '/js/[name].js',
     path: config.assetsRoot,
-    publicPath: config.dev.publicPath
+    publicPath: config.dev.assetsPublicPath
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
     new ExtractTextPlugin({
-      filename: '[name].css',
+      filename: config.assetsSubDirectory + '/css/[name].css',
       allChunks: true
     }),
     new webpack.optimize.CommonsChunkPlugin({
@@ -29,7 +29,7 @@ var webpackConfig = {
     noInfo: true,
     overlay: true
   },
-  devtool: 'cheap-module-eval-source-map'
+  devtool: 'cheap-eval-source-map'
 };
 
 module.exports = webpackMerge(webpackBaseConfig, webpackConfig);

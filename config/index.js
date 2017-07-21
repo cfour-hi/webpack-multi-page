@@ -3,6 +3,8 @@ var entrys = require('./entrys.js');
 
 var dirSrc = path.resolve(__dirname, '../src');
 
+// 单独处理项目首页
+// 因为它的结构与其它页面不相同
 var entrysConfig = [
   {
     entryName: 'index/index',
@@ -34,6 +36,6 @@ module.exports = {
   },
   build: {
     env: require('./prod.env.js'),
-    assetsPublicPath: '/'
+    assetsPublicPath: '//cdn.example.com/'
   }
 }

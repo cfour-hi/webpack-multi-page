@@ -1,10 +1,11 @@
-import 'font-awesome/css/font-awesome.css'
+if (process.env.NODE_ENV === 'development') {
+  require('font-awesome/css/font-awesome.css')
+}
 
-require('app/app.css')
+require('app/css/app.css')
 require('./index.css')
 
-// var _ = require('lodash')
-var app = require('../lib/app/app.js')
+var app = require('app/js/app.js')
 
 app('home')
 

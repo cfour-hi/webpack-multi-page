@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sub-page-a</title>
+</head>
+
+<body>
+  @require('../../lib/app/components/header.html')
+  <h1>page-a</h1>
+  <img src="../../lib/app/img/webpack.png" alt="">
+  @require('../../lib/app/components/footer.html')
+
+  <% if (htmlWebpackPlugin.options.env !== 'development') { %>
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <% } %>
+</body>
+
+</html>

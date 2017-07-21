@@ -1,3 +1,5 @@
+/* @import '../lib/app/css/app.css'; */
+
 body {
   background-image: url('../lib/app/img/webpack.png');
 }

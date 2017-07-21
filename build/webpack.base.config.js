@@ -11,12 +11,12 @@ config.entrys.forEach(function (entry) {
 
 // 第三方依赖 js & css
 // 必须是所有页面都使用到的第三方库
-// 可配合 ProvidePlugin 省去依赖声明
+// 可配合插件 ProvidePlugin 省去依赖声明
 // https://doc.webpack-china.org/plugins/commons-chunk-plugin/#-chunk
 entrys.vendor = [
   'jquery',
   'normalize.css'
-]
+];
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -39,7 +39,7 @@ var webpackConfig = {
     // 忽略大型的 library 可以提高构建性能
     // 条件是 library 本身没有任何依赖
     // https://doc.webpack-china.org/configuration/module/#module-noparse
-    noParse: /jquery|lodash/,
+    noParse: /jquery/,
     // https://doc.webpack-china.org/guides/asset-management/
     rules: [
       {

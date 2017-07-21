@@ -1,5 +1,6 @@
 module.exports = [
-  'page-a/page-a',
-  'page-b/page-b',
-  'page-c/page-c'
+  'page-a/index',
+  'page-a/sub-page-a/index',
+  'page-b/index',
+  'page-c/index'
 ];
