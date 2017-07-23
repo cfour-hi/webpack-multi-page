@@ -36,6 +36,6 @@ module.exports = {
   },
   build: {
     env: require('./prod.env.js'),
-    assetsPublicPath: '//cdn.example.com/'
+    assetsPublicPath: '/'
   }
 }

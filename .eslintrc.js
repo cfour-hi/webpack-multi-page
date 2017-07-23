@@ -2,15 +2,13 @@ module.exports = {
     extends: 'standard',
     parser: 'babel-eslint',
     parserOptions: {
-        ecmaVersion: 6,
-        sourceType: 'module',
         // https://www.npmjs.com/package/babel-eslint#configuration
-        allowImportExportEverywhere: false,
+        sourceType: 'module',
         codeFrame: false
     },
     env: {
         browser: true,
-        es6: true
+        commonjs: true
     },
     rules: {
         strict: 0
