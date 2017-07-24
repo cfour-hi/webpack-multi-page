@@ -25,10 +25,6 @@ function resolve (dir) {
 var webpackConfig = {
   entry: entrys,
   resolve: {
-    // 快捷定位
-    // var app = require('./lib/app/app.js')
-    // =>
-    // var app = require('app/app.js')
     // https://doc.webpack-china.org/configuration/resolve/#resolve-alias
     alias: {
       src: path.resolve(__dirname, '../src/'),
@@ -36,8 +32,6 @@ var webpackConfig = {
     }
   },
   module: {
-    // 忽略大型的 library 可以提高构建性能
-    // 条件是 library 本身没有任何依赖
     // https://doc.webpack-china.org/configuration/module/#module-noparse
     noParse: /jquery/,
     // https://doc.webpack-china.org/guides/asset-management/
@@ -69,11 +63,11 @@ var webpackConfig = {
           ]
         })
       },
+      // https://github.com/MoOx/eslint-loader
       {
         enforce: 'pre',
         test: /\.js$/,
         use: {
-          // https://github.com/MoOx/eslint-loader
           loader: 'eslint-loader',
           options: {
             formatter: require('eslint-friendly-formatter')
@@ -81,19 +75,19 @@ var webpackConfig = {
         },
         include: [resolve('src')]
       },
+      // https://github.com/babel/babel-loader
       {
         test: /\.js$/,
         use: {
-          // https://github.com/babel/babel-loader
           loader: 'babel-loader'
         },
         include: [resolve('src')]
       },
+      // https://github.com/webpack-contrib/url-loader
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: [
           {
-            // https://github.com/webpack-contrib/url-loader
             loader: 'url-loader',
             options: {
               limit: 10000,
@@ -105,11 +99,11 @@ var webpackConfig = {
           }
         ]
       },
+      // https://github.com/webpack-contrib/url-loader
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         use: [
           {
-            // https://github.com/webpack-contrib/url-loader
             loader: 'url-loader',
             options: {
               limit: 10000,
@@ -124,10 +118,10 @@ var webpackConfig = {
     ],
   },
   plugins: [
+    // https://doc.webpack-china.org/plugins/banner-plugin/
     new webpack.BannerPlugin({
       banner: "hash:[hash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]"
     }),
-    // 省去依赖声明
     // https://doc.webpack-china.org/plugins/provide-plugin/
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -144,6 +138,7 @@ config.entrys.forEach(function (entry) {
     filename: entry.filename,
     template: entry.template,
     inject: true,
+    // https://github.com/kangax/html-minifier#options-quick-reference
     minify: {
       caseSensitive: true,
       collapseBooleanAttributes: true,
