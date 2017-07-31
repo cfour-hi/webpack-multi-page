@@ -53,7 +53,6 @@ var webpackConfig = {
               // https://github.com/webpack-contrib/css-loader
               loader: 'css-loader',
               options: {
-                sourceMap: true,
                 minimize: process.env.NODE_ENV === 'production',
                 importLoaders: 1
               },
@@ -137,7 +136,6 @@ config.entrys.forEach(function (entry) {
   webpackConfig.plugins.push(new HtmlWebpackPlugin({
     filename: entry.filename,
     template: entry.template,
-    inject: true,
     // https://github.com/kangax/html-minifier#options-quick-reference
     minify: {
       caseSensitive: true,
