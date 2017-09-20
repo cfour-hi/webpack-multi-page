@@ -1,46 +1,38 @@
 {
   "name": "webpack-multi-page",
   "version": "1.0.0",
-  "description": "",
+  "description": "基于 webpack 的多页面项目基础工程",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --progress --profile",
-    "test": "cross-env NODE_ENV=test webpack --progress --display-error-details --profile",
+    "testing": "cross-env NODE_ENV=testing webpack --progress --display-error-details --profile",
     "build": "cross-env NODE_ENV=production webpack --progress --display-error-details --profile"
   },
-  "keywords": [],
+  "keywords": [
+    "webpack",
+    "multipage"
+  ],
   "author": "Monine",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.25.0",
-    "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
-    "eslint": "^4.2.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.29.0",
     "postcss-loader": "^2.0.6",
     "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
-    "underscore-template-loader": "^0.7.3",
+    "underscore-template-loader": "^0.8.0",
     "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.5.1",
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
-    "lodash": "^4.17.4",
     "normalize.css": "^7.0.0"
   },
   "browserslist": [

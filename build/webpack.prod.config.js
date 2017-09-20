@@ -31,9 +31,9 @@ var webpackConfig = {
   // https://doc.webpack-china.org/configuration/devtool/
   devtool: 'source-map',
   // https://doc.webpack-china.org/configuration/externals/
-  externals: {
-    jquery: 'jQuery'
-  }
+  // externals: {
+  //   jquery: 'jQuery'
+  // }
 };
 
 if (process.env.NODE_ENV === 'production') {

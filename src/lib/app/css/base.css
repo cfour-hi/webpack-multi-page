@@ -1,0 +1,11 @@
+/* 基础样式（与项目无关） */
+
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}

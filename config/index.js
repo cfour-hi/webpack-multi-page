@@ -36,6 +36,7 @@ module.exports = {
   },
   build: {
     env: require('./prod.env.js'),
+    // 可配置 CDN
     assetsPublicPath: '/'
   }
 }

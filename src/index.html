@@ -6,25 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Home</title>
-
-  <% if (htmlWebpackPlugin.options.env !== 'development') { %>
-    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <% } %>
 </head>
 
 <body>
-  @require('./lib/app/components/header.html')
-  <h1><i class="fa fa-battery-full" aria-hidden="true"></i>home</h1>
-  <nav>
-    <a href="page-a/index.html">page-a</a>
-    <a href="page-b/index.html">page-b</a>
-    <a href="page-c/index.html">page-c</a>
-  </nav>
-  <img src="./lib/app/img/webpack.png" alt=""> @require('./lib/app/components/footer.html')
+  @require('./lib/app/components/header.html', { "name": "home" })
 
-  <% if (htmlWebpackPlugin.options.env !== 'development') { %>
-    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <% } %>
+  <nav>
+    <a href="page-a">page-a</a>
+    <a href="page-a/sub-page-a">sub-page-a</a>
+    <a href="page-b">page-b</a>
+    <a href="page-c">page-c</a>
+  </nav>
+
+  <main>
+    <h1>home page content</h1>
+  </main>
+
+  @require('./lib/app/components/footer.html', { "name": "home" })
 </body>
 
 </html>

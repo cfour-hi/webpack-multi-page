@@ -9,11 +9,20 @@
 </head>
 
 <body>
-  <h1>page-c</h1>
+  @require('../lib/app/components/header.html', { "name": "page-c" })
 
-  <% if (htmlWebpackPlugin.options.env !== 'development') { %>
-    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <% } %>
+  <nav>
+    <a href="/">home</a>
+    <a href="/page-a">page-a</a>
+    <a href="/page-a/sub-page-a">subpage-a</a>
+    <a href="/page-b">page-b</a>
+  </nav>
+
+  <main>
+    <h1>page-c content</h1>
+  </main>
+
+  @require('../lib/app/components/footer.html', { "name": "page-c" })
 </body>
 
 </html>

@@ -63,17 +63,17 @@ var webpackConfig = {
         })
       },
       // https://github.com/MoOx/eslint-loader
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        use: {
-          loader: 'eslint-loader',
-          options: {
-            formatter: require('eslint-friendly-formatter')
-          }
-        },
-        include: [resolve('src')]
-      },
+      // {
+      //   enforce: 'pre',
+      //   test: /\.js$/,
+      //   use: {
+      //     loader: 'eslint-loader',
+      //     options: {
+      //       formatter: require('eslint-friendly-formatter')
+      //     }
+      //   },
+      //   include: [resolve('src')]
+      // },
       // https://github.com/babel/babel-loader
       {
         test: /\.js$/,

@@ -9,14 +9,21 @@
 </head>
 
 <body>
-  @require('../../lib/app/components/header.html')
-  <h1>page-a</h1>
-  <img src="../../lib/app/img/webpack.png" alt="">
-  @require('../../lib/app/components/footer.html')
+  @require('../../lib/app/components/header.html', { "name": "sub-page-a" })
 
-  <% if (htmlWebpackPlugin.options.env !== 'development') { %>
-    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <% } %>
+  <nav>
+    <a href="/">home</a>
+    <a href="/page-a">page-a</a>
+    <a href="/page-b">page-b</a>
+    <a href="/page-c">page-c</a>
+  </nav>
+
+  <main>
+    <h1>sub-page-a content</h1>
+    <img src="../../lib/app/img/webpack.png" alt="">
+  </main>
+
+  @require('../../lib/app/components/footer.html', { "name": "sub-page-a" })
 </body>
 
 </html>
