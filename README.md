@@ -2,6 +2,10 @@
 
 webpack 前端多页项目工程，适用于展示型站点，比如官网。
 
+## Example
+
+[Demo](https://monine.github.io/webpack-multi-page/dist/)
+
 ## Feature
 
 - 支持 ES6 语法，使用 babel 编译，预设 `env` 环境 - [preset-env](https://babeljs.io/docs/plugins/preset-env/)
@@ -12,9 +16,11 @@ webpack 前端多页项目工程，适用于展示型站点，比如官网。
 
 - html、css、js 文件内资源引用全部使用相对路径并且会自动判断是否转为 base64 格式
 
-- 支持 css autoprefixer `browserslist: ["> 1%, "last 2 versions"]`，无需手写浏览器兼容。
+- 支持 css autoprefixer `browserslist: ["> 1%, "last 2 versions"]`，无需手写浏览器兼容；支持 @import 特性，由 css-loader 处理。
 
-- 采用内容 hash，文件内容未改变情况下多次打包不会修改文件名中的 hash 值。
+- 打包采用内容 hash，文件内容未改变情况下多次打包不会修改文件名中的 hash 值。
+
+详细内容可参考此文章 [基于 webpack 的前端多页工程](https://monine.github.io/#/article/21) ✨
 
 ## Node
 
@@ -26,7 +32,7 @@ webpack 前端多页项目工程，适用于展示型站点，比如官网。
   |   |-- index/                      -- 主页面资源
   |       |-- index.css
   |       |-- index.js
-  |       |-- img/                    -- 页面图片资源
+  |       |-- img/
   |   |-- page-a/                     -- page-a 页面
   |       |-- index.html
   |       |-- index.css
@@ -43,3 +49,7 @@ webpack 前端多页项目工程，适用于展示型站点，比如官网。
   除主页面把 index.html 放在 src 根目录下，其它页面和子页面结构都保持一致。
 
   :zap: **每新增一个页面都需要在 `config/entrys.js` 内添加对应的页面入口路径**
+
+## LICENSE
+
+MIT
