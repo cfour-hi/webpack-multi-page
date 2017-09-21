@@ -38,7 +38,7 @@ function pageWalk (pageName) {
   var fileHTML = filemark + '.html'
   var fileJS = filemark + '.js'
 
-  if (files.indexOf(fileHTML) === -1 && files.indexOf(fileJS) === -1) return
+  if (files.indexOf(fileHTML) === -1 || files.indexOf(fileJS) === -1) return
 
   var filename = pageName + '/' + fileHTML
   entriesConfig.push({
