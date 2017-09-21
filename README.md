@@ -20,6 +20,8 @@ webpack 前端多页项目工程，适用于展示型站点，比如官网。
 
 - 打包采用内容 hash，文件内容未改变情况下多次打包不会修改文件名中的 hash 值。
 
+- 无需手动添加页面 webpack entry，只需按照目录结构添加页面即可。
+
 详细内容可参考此文章 [基于 webpack 的前端多页工程](https://monine.github.io/#/article/21) ✨
 
 ## Node
@@ -48,7 +50,9 @@ webpack 前端多页项目工程，适用于展示型站点，比如官网。
 
   除主页面把 index.html 放在 src 根目录下，其它页面和子页面结构都保持一致。
 
-  :zap: **每新增一个页面都需要在 `config/entries.js` 内添加对应的页面入口路径**
+  ~~:zap: **每新增一个页面都需要在 `config/entries.js` 内添加对应的页面入口路径**~~
+
+  运行和打包会自动遍历除首页之外的所有页面，添加页面对应 webpack 入口配置，无需手动添加。默认文件名为 index，如需修改，可在 `config/entries.js` 内配置对应目录路径和名称。
 
 ## Usage
 
