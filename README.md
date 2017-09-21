@@ -80,6 +80,10 @@ or
   npm run build
 ```
 
+## TODO
+
+- [ ] IE8 支持
+
 ## LICENSE
 
 MIT
