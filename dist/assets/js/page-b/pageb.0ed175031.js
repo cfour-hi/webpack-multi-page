@@ -1,0 +1,3 @@
+/*! hash:649585bc02a9301768c7, chunkhash:0ed175031b8e05d22da6, name:page-b/pageb, filebase:pageb.0ed175031.js, query:, file:assets/js/page-b/pageb.0ed175031.js */
+webpackJsonp([3],{13:function(n,e,t){"use strict";(function(n){t(2),t(7);var e=t(1);(0,function(n){return n&&n.__esModule?n:{default:n}}(e).default)("page-b"),console.log(n("nav a").length)}).call(e,t(0))},7:function(n,e){}},[13]);
+//# sourceMappingURL=pageb.0ed175031.js.map

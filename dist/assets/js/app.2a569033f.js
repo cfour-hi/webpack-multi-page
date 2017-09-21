@@ -1,0 +1,3 @@
+/*! hash:649585bc02a9301768c7, chunkhash:2a569033f81425519740, name:app, filebase:app.2a569033f.js, query:, file:assets/js/app.2a569033f.js */
+webpackJsonp([6],[,function(n,e,c){"use strict";(function(n){Object.defineProperty(e,"__esModule",{value:!0}),n(function(){n("nav").addClass("active")});var c=function(n){console.log(n)};e.default=c}).call(e,c(0))},function(n,e){}]);
+//# sourceMappingURL=app.2a569033f.js.map

@@ -4,16 +4,16 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var config = require('../config/index.js');
 
-var entrys = {};
-config.entrys.forEach(function (entry) {
-  entrys[entry.entryName] = entry.entry;
+var entries = {};
+config.entries.forEach(function (entry) {
+  entries[entry.entryName] = entry.entry;
 });
 
 // 第三方依赖 js & css
 // 必须是所有页面都使用到的第三方库
 // 可配合插件 ProvidePlugin 省去依赖声明
 // https://doc.webpack-china.org/plugins/commons-chunk-plugin/#-chunk
-entrys.vendor = [
+entries.vendor = [
   'jquery',
   'normalize.css'
 ];
@@ -23,7 +23,7 @@ function resolve (dir) {
 }
 
 var webpackConfig = {
-  entry: entrys,
+  entry: entries,
   resolve: {
     // https://doc.webpack-china.org/configuration/resolve/#resolve-alias
     alias: {
@@ -131,7 +131,7 @@ var webpackConfig = {
   ]
 };
 
-config.entrys.forEach(function (entry) {
+config.entries.forEach(function (entry) {
   // https://github.com/jantimon/html-webpack-plugin
   webpackConfig.plugins.push(new HtmlWebpackPlugin({
     filename: entry.filename,

@@ -48,7 +48,7 @@ webpack 前端多页项目工程，适用于展示型站点，比如官网。
 
   除主页面把 index.html 放在 src 根目录下，其它页面和子页面结构都保持一致。
 
-  :zap: **每新增一个页面都需要在 `config/entrys.js` 内添加对应的页面入口路径**
+  :zap: **每新增一个页面都需要在 `config/entries.js` 内添加对应的页面入口路径**
 
 ## Usage
 

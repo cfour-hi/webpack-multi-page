@@ -1,0 +1,3 @@
+/*! hash:649585bc02a9301768c7, chunkhash:1da47163a046cb4054df, name:page-b/sub-page-b/sub-page-b, filebase:sub-page-b.1da47163a.js, query:, file:assets/js/page-b/sub-page-b/sub-page-b.1da47163a.js */
+webpackJsonp([2],{14:function(n,e,t){"use strict";(function(n){t(2),t(8);var e=t(1);(0,function(n){return n&&n.__esModule?n:{default:n}}(e).default)("sub-page-b"),console.log(n("nav a").length)}).call(e,t(0))},8:function(n,e){}},[14]);
+//# sourceMappingURL=sub-page-b.1da47163a.js.map
