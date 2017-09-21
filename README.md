@@ -50,6 +50,38 @@ webpack 前端多页项目工程，适用于展示型站点，比如官网。
 
   :zap: **每新增一个页面都需要在 `config/entrys.js` 内添加对应的页面入口路径**
 
+## Usage
+
+### install
+
+`git clone git@github.com:monine/webpack-multi-page.git`
+
+or
+
+`git clone https://github.com/Monine/webpack-multi-page.git`
+
+or
+
+open https://codeload.github.com/Monine/webpack-multi-page/zip/master
+
+### Build Setup
+
+1. install dependencies
+
+  npm install
+
+2. serve with hot reload at localhost:8080
+
+  npm run dev
+
+3. build for testing without minification
+
+  npm run testing
+
+4. build for production with minification
+
+  npm run build
+
 ## LICENSE
 
 MIT
