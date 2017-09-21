@@ -24,7 +24,7 @@ webpack 前端多页项目工程，适用于展示型站点，比如官网。
 
 ## Node
 
-- 请务必遵循如下页面结构
+请务必遵循如下页面结构
 
   ``` base
   |-- src/                        -- 源文件
@@ -52,7 +52,7 @@ webpack 前端多页项目工程，适用于展示型站点，比如官网。
 
 ## Usage
 
-### install
+### Install
 
 `git clone git@github.com:monine/webpack-multi-page.git`
 
