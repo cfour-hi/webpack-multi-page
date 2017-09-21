@@ -62,25 +62,23 @@ or
 
 or
 
-open https://codeload.github.com/Monine/webpack-multi-page/zip/master
+[download](https://codeload.github.com/Monine/webpack-multi-page/zip/master)
 
 ### Build Setup
 
-1. install dependencies
-
+``` base
+# install dependencies
   npm install
 
-2. serve with hot reload at localhost:8080
-
+# serve with hot reload at localhost:8080
   npm run dev
 
-3. build for testing without minification
-
+# build for testing without minification
   npm run testing
 
-4. build for production with minification
-
+# build for production with minification
   npm run build
+```
 
 ## LICENSE
 
