@@ -59,8 +59,6 @@ function pageWalk (pageName) {
   }
 }
 
-console.log(entriesConfig)
-
 module.exports = {
   entries: entriesConfig,
   assetsRoot: path.resolve(__dirname, '../dist'),

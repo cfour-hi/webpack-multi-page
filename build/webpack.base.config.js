@@ -131,36 +131,43 @@ var webpackConfig = {
   ]
 };
 
+// https://github.com/kangax/html-minifier#options-quick-reference
+var htmlMinify = {
+  caseSensitive: true,
+  collapseBooleanAttributes: true,
+  collapseInlineTagWhitespace: true,
+  collapseWhitespace: true,
+  minifyJS: true,
+  minifyCSS: true,
+  minifyURLs: true,
+  removeAttributeQuotes: true,
+  removeComments: true,
+  removeEmptyAttributes: true,
+  removeOptionalTags: true,
+  removeRedundantAttributes: true,
+  removeScriptTypeAttributes: true,
+  removeStyleLinkTypeAttributes: true,
+  sortAttributes: true,
+  sortClassName: true,
+  useShortDoctype: true
+}
+
 config.entries.forEach(function (entry) {
-  // https://github.com/jantimon/html-webpack-plugin
-  webpackConfig.plugins.push(new HtmlWebpackPlugin({
+  var options = {
     filename: entry.filename,
     template: entry.template,
-    // https://github.com/kangax/html-minifier#options-quick-reference
-    minify: {
-      caseSensitive: true,
-      collapseBooleanAttributes: true,
-      collapseInlineTagWhitespace: true,
-      collapseWhitespace: true,
-      minifyJS: true,
-      minifyCSS: true,
-      minifyURLs: true,
-      removeAttributeQuotes: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeOptionalTags: true,
-      removeRedundantAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true,
-      sortAttributes: true,
-      sortClassName: true,
-      useShortDoctype: true
-    },
     chunks: ['manifest', 'vendor', 'app', entry.entryName],
     env: process.env.NODE_ENV === 'development'
       ? JSON.parse(config.dev.env.NODE_ENV)
       : JSON.parse(config.build.env.NODE_ENV)
-  }))
+  }
+
+  if (process.env.NODE_ENV === 'production') {
+    options.minify = htmlMinify
+  }
+
+  // https://github.com/jantimon/html-webpack-plugin
+  webpackConfig.plugins.push(new HtmlWebpackPlugin(options))
 });
 
 module.exports = webpackConfig;
