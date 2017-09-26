@@ -1,3 +1,34 @@
-/*! hash:649585bc02a9301768c7, chunkhash:2a569033f81425519740, name:app, filebase:app.2a569033f.js, query:, file:assets/js/app.2a569033f.js */
-webpackJsonp([6],[,function(n,e,c){"use strict";(function(n){Object.defineProperty(e,"__esModule",{value:!0}),n(function(){n("nav").addClass("active")});var c=function(n){console.log(n)};e.default=c}).call(e,c(0))},function(n,e){}]);
+/*! hash:f812106e593645465500, chunkhash:2a569033f81425519740, name:app, filebase:app.2a569033f.js, query:, file:assets/js/app.2a569033f.js */
+webpackJsonp([6],[
+/* 0 */,
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// 项目公共逻辑和方法
+
+$(function () {
+  $('nav').addClass('active');
+});
+
+var consoleLog = function consoleLog(log) {
+  console.log(log);
+};
+
+exports.default = consoleLog;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ })
+]);
 //# sourceMappingURL=app.2a569033f.js.map

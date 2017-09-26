@@ -1,6 +1,6 @@
 .DS_Store
 .editorconfig
-dist/
+# dist/
 .vscode/
 
 # Logs
