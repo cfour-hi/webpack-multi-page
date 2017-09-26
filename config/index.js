@@ -71,6 +71,7 @@ module.exports = {
   build: {
     env: require('./prod.env.js'),
     // 可配置 CDN
+    // assetsPublicPath: 'https://monine.github.io/webpack-multi-page/'
     assetsPublicPath: '/'
   }
 }

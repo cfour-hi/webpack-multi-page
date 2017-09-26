@@ -1,4 +1,4 @@
-/*! hash:f812106e593645465500, chunkhash:dd162f5b85a865dd18be, name:manifest, filebase:manifest.dd162f5b8.js, query:, file:assets/js/manifest.dd162f5b8.js */
+/*! hash:b2cc82a13893f2bd35ae, chunkhash:22c93519ff7c2e740aff, name:manifest, filebase:manifest.22c93519f.js, query:, file:assets/js/manifest.22c93519f.js */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
 /******/ 	var parentJsonpFunction = window["webpackJsonp"];
@@ -145,11 +145,11 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "https://monine.github.io/webpack-multi-page/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/ })
 /************************************************************************/
 /******/ ([]);
-//# sourceMappingURL=manifest.dd162f5b8.js.map
+//# sourceMappingURL=manifest.22c93519f.js.map
