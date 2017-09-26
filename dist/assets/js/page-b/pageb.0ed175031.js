@@ -1,4 +1,4 @@
-/*! hash:b2cc82a13893f2bd35ae, chunkhash:0ed175031b8e05d22da6, name:page-b/pageb, filebase:pageb.0ed175031.js, query:, file:assets/js/page-b/pageb.0ed175031.js */
+/*! hash:20e4c700db31362a6be1, chunkhash:0ed175031b8e05d22da6, name:page-b/pageb, filebase:pageb.0ed175031.js, query:, file:assets/js/page-b/pageb.0ed175031.js */
 webpackJsonp([3],{
 
 /***/ 13:
