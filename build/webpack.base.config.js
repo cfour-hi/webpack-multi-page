@@ -106,7 +106,7 @@ var webpackConfig = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: config.assetsSubDirectory + '/fonts/[name].[hash:9].[ext]',
+              name: config.assetsSubDirectory + '/font/[name].[hash:9].[ext]',
               publicPath: process.env.NODE_ENV === 'development'
                 ? config.dev.assetsPublicPath
                 : config.build.assetsPublicPath
