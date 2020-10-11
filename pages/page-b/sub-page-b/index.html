@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sub-page-b</title>
+</head>
+
+<body>
+  @require('../../../lib/components/header.html', { "name": "sub-page-b" })
+
+  <nav>
+    <a href="../../index.html">home</a>
+    <a href="../../page-a/index.html">page-a</a>
+    <a href="../../page-a/sub-page-a/index.html">subpage-a</a>
+    <a href="../index.html">page-b</a>
+    <a href="../../page-c/index.html">page-c</a>
+  </nav>
+
+  <main>
+    <h1>sub-page-b content</h1>
+  </main>
+
+  @require('../../../lib/components/footer.html', { "name": "sub-page-b" })
+</body>
+
+</html>
