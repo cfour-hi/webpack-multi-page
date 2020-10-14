@@ -8,7 +8,7 @@ function resolveSubDirname(filepath) {
     .map(({ name }) => name);
 }
 
-const dirPages = path.resolve(__dirname, '../pages');
+const dirPages = path.resolve(__dirname, '../../pages');
 const pages = resolveSubDirname(dirPages);
 const ENTRY_NAME = 'index';
 const entries = [

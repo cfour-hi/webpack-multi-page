@@ -6,7 +6,7 @@ const entryConf = require('./utils/entry.conf');
 const constant = require('./utils/constant');
 
 function resolve(dir) {
-  return path.join(__dirname, '..', dir);
+  return path.resolve(__dirname, '..', dir);
 }
 
 const entries = {};
